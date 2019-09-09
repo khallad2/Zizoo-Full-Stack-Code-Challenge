@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {MDBBtn, MDBCard, MDBCardBody, MDBContainer,} from "mdbreact";
+import '../styles/offer-item.css';
 
 
 /**
@@ -46,10 +47,10 @@ class OfferItem extends Component {
      */
     render() {
         return (
-            <MDBContainer className={'animated fadeInLeftBig slow'}>
+            <MDBContainer className={'offer-items animated fadeInLeftBig slow'}>
                 <MDBCard className="w-75 mb-4">
                     <MDBCardBody className={'container'}>
-                        <div className={'row'}>
+                        <div className={'row    '}>
                             <img className={'col-sm-6 float-left'} src={this.state.image_url}/>
                             <div className={'col-sm-6 float-right row'}>
                                 <div className={'col-sm-8 font-italic'}>

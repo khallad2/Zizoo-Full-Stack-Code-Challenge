@@ -1,6 +1,6 @@
 import React from "react";
 import {MDBCol, MDBContainer, MDBFooter, MDBRow} from "mdbreact";
-import './footer.css';
+import '../styles/footer.css';
 
 const FooterPage = () => {
     return (
@@ -14,11 +14,9 @@ const FooterPage = () => {
             </MDBContainer>
             <div className="my-footer text-center py-3">
                 <MDBContainer fluid>
-                    <h5>Khallad</h5>
-                    <h5>
-                        If you interested add a star to the repo
-                    </h5>
-                    <a href="https://khallad2.github.io/khallad.github.io/"> &copy; {new Date().getFullYear()} Copyright:
+                    <img src={'/images/logo.jpg'}/><br/>
+                    <a className={'text'}
+                       href="https://khallad2.github.io/khallad.github.io/"> &copy; {new Date().getFullYear()} Copyright:
                         Khallad Sharaf El-Din </a>
                 </MDBContainer>
             </div>

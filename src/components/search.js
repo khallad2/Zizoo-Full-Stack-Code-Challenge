@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import ApolloClient from "apollo-boost";
 import {ApolloProvider, Query} from "react-apollo";
-import {CHALLENGE_OFFERS} from '../../queries/ChallengeOffers';
-
-import {apolloClient} from '../../apolloClientConfig';
-import OfferItem from "../offer-item/offer-item";
+import {CHALLENGE_OFFERS} from '../queries/ChallengeOffers';
+import {apolloClient} from '../apolloClientConfig';
+import OfferItem from "./offer-item";
+import '../styles/search.css';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 /**
  * Get values from apolloClientConfig
- * @type {DefaultClient<unknown>}
+ * @type {DefaultClient<graphql>}
  */
 const client = new ApolloClient({
     uri: apolloClient.uri,
@@ -23,12 +24,6 @@ client.query({
 }).then(res => {
     console.log('CHALLENGE_OFFERS', res.data.listZizooChallengeOffers.items);
 });
-
-// client.query({
-//     query: LIST_CHALLENGE_OFFERS
-// }).then(res => {
-//     console.log('CHALLENGE_OFFERS', res.data.listZizooChallengeOffers.items);
-// });
 
 
 /**
@@ -52,7 +47,7 @@ class Search extends Component {
     async getData() {
         let data = await client.query({query: CHALLENGE_OFFERS});
         this.setState({
-            challengeOffers: this.validateOffers(data.data.listZizooChallengeOffers.items)
+            challengeOffers: this.filterOffers(data.data.listZizooChallengeOffers.items)
         });
     }
 
@@ -62,7 +57,7 @@ class Search extends Component {
      * @param challengeOffers
      * @return {[]}
      */
-    validateOffers(challengeOffers) {
+    filterOffers(challengeOffers) {
         let res = [];
         if (challengeOffers.length > 0) {
             res = challengeOffers.filter((offer) => (offer.length >= 10 || offer.length <= 20) && offer.year >= 2010)
@@ -75,7 +70,7 @@ class Search extends Component {
         console.log('state.items', this.state);
         return (
             <ApolloProvider client={client}>
-                <div className="search">
+                <div id={"search"}>
                     <Query query={CHALLENGE_OFFERS}>
                         {({loading}) => {
                             if (loading) return 'Loading...';
