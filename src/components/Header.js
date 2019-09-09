@@ -15,7 +15,7 @@ class Header extends Component {
                         <p id={'slogan'}> Boat Rental Shop</p>
                     </div>
                     <div className={"col-4"}>
-                        <h1 id={'slogan'}> Full-stack-code-challenge </h1>
+                        <h1 id={'slogan'}> Fullstack Code Challenge </h1>
                     </div>
                     <div id={'about-us'}>
                         <a href={'https://www.zizoo.com/'} target={'_blank'}>About us<i
