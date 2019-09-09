@@ -67,7 +67,6 @@ class Search extends Component {
 
 
     render() {
-        console.log('state.items', this.state);
         return (
             <ApolloProvider client={client}>
                 <div id={"search"}>

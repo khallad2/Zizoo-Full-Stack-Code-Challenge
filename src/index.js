@@ -8,6 +8,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import Search from "./components/search";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Notfound from "./components/not-fount-404";
 
 const routing = (
     <Router>
@@ -15,6 +16,7 @@ const routing = (
             <Route path="/" component={App}/>
             <Route path="/search" component={Search}/>
             {/*<Notfound ={Notfound} />*/}
+            <Route path='/404' component={Notfound}/>
         </div>
     </Router>
 );

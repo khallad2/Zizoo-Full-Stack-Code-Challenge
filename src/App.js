@@ -5,14 +5,14 @@ import Landing from "./components/landing";
 
 function App() {
   return (
-      <div className="App" id="App">
+      <div className="App">
           <header>
               <Header/>
           </header>
           <main>
               <Landing/>
           </main>
-          </div>
+      </div>
   );
 }
 

@@ -3,6 +3,7 @@
     width: 100%;
     position: fixed;
     line-height: 60px;
-    background-color: #363759;
+    background-color: #020531;
+    opacity: 0.8;
     border: #211b19 solid;
 }

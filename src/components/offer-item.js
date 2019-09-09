@@ -51,7 +51,7 @@ class OfferItem extends Component {
                 <MDBCard className="w-75 mb-4">
                     <MDBCardBody className={'container'}>
                         <div className={'row    '}>
-                            <img className={'col-sm-6 float-left'} src={this.state.image_url}/>
+                            <img className={'col-sm-6 float-left'} src={this.state.image_url} alt={'offer-img'}/>
                             <div className={'col-sm-6 float-right row'}>
                                 <div className={'col-sm-8 font-italic'}>
                                     <strong>{this.state.type} {this.state.length}</strong> {this.state.year} <br/>

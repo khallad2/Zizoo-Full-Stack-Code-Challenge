@@ -14,7 +14,7 @@ const FooterPage = () => {
             </MDBContainer>
             <div className="my-footer text-center py-3">
                 <MDBContainer fluid>
-                    <img src={'/images/logo.jpg'}/><br/>
+                    <img src={'/images/logo.jpg'} alt={'logo'}/><br/>
                     <a className={'text'}
                        href="https://khallad2.github.io/khallad.github.io/"> &copy; {new Date().getFullYear()} Copyright:
                         Khallad Sharaf El-Din </a>

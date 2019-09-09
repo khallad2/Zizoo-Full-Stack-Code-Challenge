@@ -28,16 +28,19 @@ class Landing extends Component {
         super(props);
         this.state = {
             displaySearch: false
-        }
+        };
+        this.displaySearch = this.displaySearch.bind(this);
     }
 
-    //
     componentDidMount() {
         this._isMounted = true;
     }
 
-    //
-    //
+
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
+
     displaySearch = () => {
         if (this._isMounted) {
             this.setState({
@@ -52,7 +55,6 @@ class Landing extends Component {
      * @return {*}
      */
     render() {
-
         if (!this.state.displaySearch) {
             return (
                 <div>
@@ -65,12 +67,11 @@ class Landing extends Component {
                     <FooterPage/>
                 </div>
             );
-        } else {
+        }
+        if (this.state.displaySearch) {
             return (<Search/>);
         }
     }
-
-    // }
 }
 
 export default Landing;
