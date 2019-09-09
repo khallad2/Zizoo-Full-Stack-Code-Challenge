@@ -7,6 +7,10 @@ import {MDBBtn, MDBCard, MDBCardBody, MDBContainer,} from "mdbreact";
  */
 class OfferItem extends Component {
 
+    /**
+     * Component state objects
+     * @type {{starRating: number, offerItem: null}}
+     */
     state = {
         offerItem: null,
         starRating: 0
@@ -18,6 +22,9 @@ class OfferItem extends Component {
         this.state.offerItem.free_extras = this.convertStringToJson(this.state.offerItem.free_extras);
     }
 
+    /**
+     * handle offer items after component mounting
+     */
     componentDidMount() {
         this.setState(this.state.offerItem, () => {
             return this.props.offerItem;
@@ -33,6 +40,10 @@ class OfferItem extends Component {
         return str.replace(',', '000').replace(/[^\w\s]/gi, '').replace('000', ' ');
     };
 
+    /**
+     * render Single Offer item
+     * @return {*}
+     */
     render() {
         return (
             <MDBContainer className={'animated fadeInLeftBig slow'}>
@@ -43,19 +54,20 @@ class OfferItem extends Component {
                             <div className={'col-sm-6 float-right row'}>
                                 <div className={'col-sm-8 font-italic'}>
                                     <strong>{this.state.type} {this.state.length}</strong> {this.state.year} <br/>
+                                    <i className="far fa-heart float-right"></i>
                                     {this.state.locality}, {this.state.country}
                                     <hr/>
-                                    <p className={'blue-text'}>Boat Type: {this.state.sail_type}</p>
+                                    <i className={'blue-text'}>Boat Type: </i> {this.state.sail_type}
                                     <br/>
-                                    <p className={'blue-text'}>Free Extras: {this.state.free_extras}</p>
+                                    <br/>
+                                    <i className={'blue-text'}>Free Extras: </i> {this.state.free_extras}
                                 </div>
                                 <div className={'col-sm-4 font-italic'}>
-                                    Length <i className="fas fa-ruler blue-text"></i> {this.state.length}
-                                    <br/>
-                                    Cabins <i className="fas fa-person-booth blue-text"></i> {this.state.cabins}
-                                    <br/>
-                                    Guests <i className="fas fa-user-friends blue-text"></i> {this.state.guests}
-                                    <br/>
+                                    Length <i className="fas fa-ruler blue-text"></i> {this.state.length}m
+                                    <hr/>
+                                    Cabins <i className="fas fa-person-booth blue-text"></i> {this.state.cabins}.
+                                    <hr/>
+                                    Guests <i className="fas fa-user-friends blue-text"></i> {this.state.guests}.
                                 </div>
                                 <hr/>
                             </div>
