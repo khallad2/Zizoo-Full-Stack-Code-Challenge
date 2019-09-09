@@ -1,0 +1,7 @@
+.my-footer {
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    line-height: 60px;
+    background-color: #363759;
+}
