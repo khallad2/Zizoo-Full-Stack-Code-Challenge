@@ -3,6 +3,9 @@ export const ComConstance = {
         about: 'About us',
         zizooFBLink: 'https://www.facebook.com/pg/ZizooBoats/',
         zizooWebLink: 'https://www.zizoo.com/en/about-zizoo',
+        slogan: 'Boat Rental Shop',
+        logo: '/images/logo.jpg',
+        phone: '(+44)2033-183641'
     },
     searchPage: {
         loading: 'Loading...',
@@ -21,4 +24,5 @@ export const ComConstance = {
         luxury: 'Luxury'
     },
     directBooking: 'Direct Booking',
+    headerTitle: 'Full-stack-code-challenge'
 }

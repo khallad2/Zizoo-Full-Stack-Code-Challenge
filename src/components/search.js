@@ -63,28 +63,29 @@ class Search extends Component {
                     <div className={"container-fluid"}>
                         <div id={'header-content'} className={"row"}>
                             <div className={"col-4 "}>
-                                <a href={'https://www.zizoo.com/'}
-                                   target={'_blank'}><h2><img className={'logo'} src={'/images/logo.jpg'} alt={'logo'}/>
+                                <a href={ComConstance.zizooWebLink}
+                                   target={'_blank'}><h2><img className={'logo'} src={ComConstance.zizo.logo}
+                                                              alt={'logo'}/>
                                 </h2></a>
-                                <p id={'slogan'}> Boat Rental Shop</p>
+                                <p id={'slogan'}> {ComConstance.zizo.slogan}</p>
                             </div>
                             <div className={"col-4"}>
-                                <h1 id={'slogan'}> Full-stack-code-challenge </h1>
+                                <h1 id={'slogan'}> {ComConstance.headerTitle} </h1>
                             </div>
                             <div id={'about-us'}>
-                                <a href={ComConstance.zizooWebLink} target={'_blank'}>{ComConstance.zizo.about}<i
-                                    className="fab fa-angellist"></i></a>
-                                (+44)2033-183641 <i className="fas fa-phone"> </i>
+                                <a href={ComConstance.zizooWebLink} target={'_blank'}>{ComConstance.zizo.about}
+                                    <i className="fab fa-angellist"> </i></a>
+                                {ComConstance.zizo.phone} <i className="fas fa-phone"> </i>
                                 <a href={ComConstance.zizooFBLink} target={'_blank'}> <MDBIcon fab
                                                                                                icon="facebook-f"/></a>
                             </div>
                             <hr id={'header-hr'}/>
-                            <Link to={'/'}> Home </Link>
+                            <Link to={'/'}> Home </Link> <i className={'white-text'}> &nbsp; / Search</i>
                         </div>
                     </div>
                 </header>
                 <ApolloProvider client={client}>
-                    <div id={"search"}>
+                    <div>
                         <Query query={CHALLENGE_OFFERS}>
                             {({loading}) => {
                                 if (loading) return `${ComConstance.searchPage.loading}...`;
