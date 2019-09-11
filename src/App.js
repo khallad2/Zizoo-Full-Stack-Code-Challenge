@@ -4,6 +4,7 @@ import Landing from "./components/landing";
 import {Link} from "react-router-dom";
 import {MDBIcon} from "mdbreact";
 import {ComConstance} from "./Common_Constants";
+import {environment} from "./environment";
 
 
 function App() {
@@ -15,20 +16,21 @@ function App() {
                 <div className={"container-fluid"}>
                     <div id={'header-content'} className={"row"}>
                         <div className={"col-4 "}>
-                            <a href={ComConstance.zizooWebLink}
-                               target={'_blank'}>
-                            </a>
+                            <a href={environment.zizooWebLink}
+                               target={'_blank'}><h2><img className={'logo'} src={ComConstance.zizo.logo}
+                                                          alt={'logo'}/>
+                            </h2></a>
                             <p id={'slogan'}> {ComConstance.zizo.slogan}</p>
                         </div>
                         <div className={"col-4"}>
                             <h1 id={'slogan'}> {ComConstance.headerTitle} </h1>
                         </div>
                         <div id={'about-us'}>
-                            <a href={ComConstance.zizooWebLink} target={'_blank'}>{ComConstance.zizo.about}
+                            <a href={environment.zizooWebLink} target={'_blank'}>{ComConstance.zizo.about}
                                 <i className="fab fa-angellist"> </i></a>
                             {ComConstance.zizo.phone} <i className="fas fa-phone"> </i>
-                            <a href={ComConstance.zizooFBLink} target={'_blank'}> <MDBIcon fab
-                                                                                           icon="facebook-f"/></a>
+                            <a href={environment.zizooFBLink} target={'_blank'}> <MDBIcon fab
+                                                                                          icon="facebook-f"/></a>
                         </div>
                         <hr id={'header-hr'}/>
                         <Link to={'/'}> Home </Link>

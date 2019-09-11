@@ -3,6 +3,7 @@ import Search from "./search";
 import '../styles/landing.css';
 import {Link} from "react-router-dom";
 import {MDBCol, MDBContainer, MDBFooter, MDBRow} from "mdbreact";
+import {ComConstance} from '../Common_Constants';
 
 /**
  * Class search
@@ -77,7 +78,7 @@ class Landing extends Component {
                             </MDBContainer>
                             <div className="my-footer text-center py-3">
                                 <MDBContainer fluid>
-                                    <img src={'/images/logo.jpg'} alt={'logo'}/><br/>
+                                    <img src={ComConstance.zizo.logo} alt={'logo'}/><br/>
                                     <a className={'text'}
                                        href="https://khallad2.github.io/khallad.github.io/"> &copy; {new Date().getFullYear()} Copyright:
                                         Khallad Sharaf El-Din </a>

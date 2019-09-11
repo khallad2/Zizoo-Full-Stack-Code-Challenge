@@ -1,18 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Search from "./components/search";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-
-const routing = (
-    <Router>
-        <Switch>
-            <Route path="/" component={App}/>
-            <Route path="/search" component={Search}/>
-            {/*<Notfound ={Notfound} />*/}
-        </Switch>
-    </Router>
-);
+import {routing} from "./routing";
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
