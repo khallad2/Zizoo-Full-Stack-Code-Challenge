@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
 import Landing from "./components/landing";
 import {Link} from "react-router-dom";
 import {MDBIcon} from "mdbreact";
 import {ComConstance} from "./Common_Constants";
 import {environment} from "./environment";
+import './App.css';
 
 
 function App() {

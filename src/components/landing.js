@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Search from './search';
-import '../styles/landing.css';
 import {Link} from 'react-router-dom';
 import {MDBCol, MDBContainer, MDBFooter, MDBRow} from 'mdbreact';
 import {ComConstance} from '../Common_Constants';
+import '../styles/landing.css';
 
 /**
  * Class search
@@ -30,7 +30,7 @@ class Landing extends Component {
     componentWillUnmount() {
         this.setState({
             displaySearch: false
-        })
+        });
     }
 
     /**

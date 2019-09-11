@@ -6,10 +6,10 @@ import OfferItem from "./offer-item";
 import {Link} from "react-router-dom";
 import {MDBIcon} from "mdbreact";
 import {ComConstance} from "../Common_Constants";
-import '../styles/search.css';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import {apolloClient} from "../apolloClientConfig";
 import {environment} from "../environment";
+import '../styles/search.css';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 /**
  * Get values from apolloClientConfig
