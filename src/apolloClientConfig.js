@@ -1,7 +1,10 @@
-import {ComConstance} from "./Common_Constants";
+import {environment} from "./environment";
 
-
+/**
+ * ApolloConfig
+ * @type {{headers: *, uri: *}}
+ */
 export const apolloClient = {
-    uri: ComConstance.apolloClient.uri,
-    headers: ComConstance.apolloClient.headers
+    uri: environment.apolloClient.uri,
+    headers: environment.apolloClient.headers
 };

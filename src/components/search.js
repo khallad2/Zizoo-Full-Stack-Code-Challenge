@@ -2,22 +2,19 @@ import React, {Component} from 'react';
 import ApolloClient from "apollo-boost";
 import {ApolloProvider, Query} from "react-apollo";
 import {CHALLENGE_OFFERS} from '../queries/ChallengeOffers';
-import {environment as env} from '../environment';
 import OfferItem from "./offer-item";
 import {Link} from "react-router-dom";
 import {MDBIcon} from "mdbreact";
 import {ComConstance} from "../Common_Constants";
 import '../styles/search.css';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import {apolloClient} from "../apolloClientConfig";
 
 /**
  * Get values from apolloClientConfig
  * @type {DefaultClient<graphql>}
  */
-const client = new ApolloClient({
-    uri: env.apolloClient.uri,
-    headers: env.apolloClient.headers
-});
+const client = new ApolloClient(apolloClient);
 
 
 /**
