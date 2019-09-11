@@ -25,6 +25,7 @@ class Search extends Component {
 
     state = {
         challengeOffers: [],
+        serverError: false
     };
 
     componentDidMount() {
@@ -36,10 +37,20 @@ class Search extends Component {
      * @return {Promise<ApolloQueryResult<any>>}
      */
     async getData() {
-        let data = await client.query({query: CHALLENGE_OFFERS});
-        this.setState({
-            challengeOffers: this.filterOffers(data.data.listZizooChallengeOffers.items)
-        });
+        let response = await client.query({query: CHALLENGE_OFFERS});
+
+        if (response.data)
+            this.setState({
+                challengeOffers: this.filterOffers(response.data.listZizooChallengeOffers.items)
+            });
+
+        if (response.errors) {
+            console.log('server error', this.state);
+            this.setState({
+                serverError: true
+            });
+        }
+
     }
 
     /**
@@ -58,7 +69,8 @@ class Search extends Component {
 
 
     render() {
-        return (
+        if (!this.state.serverError) {
+            return (
             <div>
                 <header>
                     <div className={"container-fluid"}>
@@ -81,7 +93,8 @@ class Search extends Component {
                                                                                               icon="facebook-f"/></a>
                             </div>
                             <hr id={'header-hr'}/>
-                            <Link to={'/'}> Home </Link> <i className={'white-text'}> &nbsp; / Search</i>
+                            <Link to={'/'}><p className={'font-italic'}>Home</p></Link> <i
+                            className={'white-text'}> &nbsp; / Search</i>
                         </div>
                     </div>
                 </header>
@@ -99,6 +112,10 @@ class Search extends Component {
                 </ApolloProvider>
             </div>
         );
+        } else {
+            return (<p>server error</p>)
+            // TODO handle error case
+        }
     }
 }
 

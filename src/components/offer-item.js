@@ -21,7 +21,9 @@ class OfferItem extends Component {
     constructor(props) {
         super(props);
         this.state.offerItem = this.props.offerItem;
-        this.state.offerItem.free_extras = this.convertStringToJson(this.state.offerItem.free_extras);
+        if (this.state.offerItem.free_extras) {
+            this.state.offerItem.free_extras = this.convertStringToJson(this.state.offerItem.free_extras);
+        }
     }
 
     /**
@@ -39,7 +41,7 @@ class OfferItem extends Component {
      * @return {string}
      */
     convertStringToJson = (str) => {
-        return str.replace(',', '000').replace(/[^\w\s]/gi, '').replace('000', ' ');
+        return str.replace(',', '000').replace(/[^\w\s]/gi, '').replace('000', ', ');
     };
 
     /**

@@ -33,7 +33,7 @@ function App() {
                                                                                           icon="facebook-f"/></a>
                         </div>
                         <hr id={'header-hr'}/>
-                        <Link to={'/'}> Home </Link>
+                        <Link to={'/'}><p className={'font-italic'}>Home</p></Link>
                     </div>
                 </div>
             </header>
