@@ -93,7 +93,7 @@ class Search extends Component {
                                                                                               icon="facebook-f"/></a>
                             </div>
                             <hr id={'header-hr'}/>
-                            <Link to={'/'}><p className={'font-italic'}>Home</p></Link> <i
+                            <Link to={'/'}><i className={'fa fa-home white-text'}> </i></Link> <i
                             className={'white-text'}> &nbsp; / Search</i>
                         </div>
                     </div>

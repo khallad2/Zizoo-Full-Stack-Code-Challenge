@@ -9,7 +9,7 @@ import {environment} from "./environment";
 
 function App() {
     // i made the header as separate component to be easily injected in easy way anywhere
-    // now i deleted header compoenent so i will re-use the header code in the search page
+    // as you asked me now i deleted header, Footer components so i will re-use the header code in the search page
     return (
         <div className="App">
             <header>
@@ -33,7 +33,7 @@ function App() {
                                                                                           icon="facebook-f"/></a>
                         </div>
                         <hr id={'header-hr'}/>
-                        <Link to={'/'}><p className={'font-italic'}>Home</p></Link>
+                        <Link to={'/'}><i className={'fas fa-home white-text'}> </i></Link>
                     </div>
                 </div>
             </header>
