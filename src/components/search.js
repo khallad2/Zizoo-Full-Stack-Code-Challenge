@@ -64,9 +64,8 @@ class Search extends Component {
                         <div id={'header-content'} className={"row"}>
                             <div className={"col-4 "}>
                                 <a href={ComConstance.zizooWebLink}
-                                   target={'_blank'}><h2><img className={'logo'} src={ComConstance.zizo.logo}
-                                                              alt={'logo'}/>
-                                </h2></a>
+                                   target={'_blank'}>
+                                </a>
                                 <p id={'slogan'}> {ComConstance.zizo.slogan}</p>
                             </div>
                             <div className={"col-4"}>
