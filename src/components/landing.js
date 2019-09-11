@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Search from "./search";
+import Search from './search';
 import '../styles/landing.css';
-import {Link} from "react-router-dom";
-import {MDBCol, MDBContainer, MDBFooter, MDBRow} from "mdbreact";
+import {Link} from 'react-router-dom';
+import {MDBCol, MDBContainer, MDBFooter, MDBRow} from 'mdbreact';
 import {ComConstance} from '../Common_Constants';
 
 /**
@@ -61,26 +61,26 @@ class Landing extends Component {
         } else {
             return (
                 <div>
-                    <MDBCol className="text-center">
+                    <MDBCol className={'text-center'}>
                         <Link onClick={this.displaySearch}
-                              className={'btn-floating purple-gradient start-button black-text'} to="/Search">
-                            Start Search <i className="fas fa-bolt animated flip"> </i>
+                              className={'btn-floating purple-gradient start-button black-text'} to='/Search'>
+                            Start Search <i className={'fas fa-bolt animated flip'}> </i>
                         </Link>
                     </MDBCol>
                     <footer>
-                        <MDBFooter color="" className="font-small pt-4 mt-4 clark-footer">
-                            <MDBContainer fluid className="text-center text-md-left">
+                        <MDBFooter className={'font-small pt-4 mt-4 clark-footer'}>
+                            <MDBContainer fluid className={'text-center text-md-left'}>
                                 <MDBRow>
-                                    <MDBCol md="4">
+                                    <MDBCol md='4'>
 
                                     </MDBCol>
                                 </MDBRow>
                             </MDBContainer>
-                            <div className="my-footer text-center py-3">
+                            <div className={'my-footer text-center py-3'}>
                                 <MDBContainer fluid>
                                     <img src={ComConstance.zizo.logo} alt={'logo'}/><br/>
                                     <a className={'text'}
-                                       href="https://khallad2.github.io/khallad.github.io/"> &copy; {new Date().getFullYear()} Copyright:
+                                       href='https://khallad2.github.io/khallad.github.io/'> &copy; {new Date().getFullYear()} Copyright:
                                         Khallad Sharaf El-Din </a>
                                 </MDBContainer>
                             </div>
