@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {MDBBtn, MDBCard, MDBCardBody, MDBContainer,} from "mdbreact";
+import {ComConstance} from "../Common_Constants";
 import '../styles/offer-item.css';
 
 
@@ -58,17 +59,20 @@ class OfferItem extends Component {
                                     <i className="far fa-heart float-right"></i>
                                     {this.state.locality}, {this.state.country}
                                     <hr/>
-                                    <i className={'blue-text'}>Boat Type: </i> {this.state.sail_type}
+                                    <i className={'blue-text'}>{ComConstance.boat.type}</i> {this.state.sail_type}
                                     <br/>
                                     <br/>
-                                    <i className={'blue-text'}>Free Extras: </i> {this.state.free_extras}
+                                    <i className={'blue-text'}>{ComConstance.boat.freeExtras}</i> {this.state.free_extras}
                                 </div>
                                 <div className={'col-sm-4 font-italic'}>
-                                    Length <i className="fas fa-ruler blue-text"></i> {this.state.length}m
+                                    {ComConstance.boat.length} <i
+                                    className="fas fa-ruler blue-text"></i> {this.state.length}m
                                     <hr/>
-                                    Cabins <i className="fas fa-person-booth blue-text"></i> {this.state.cabins}.
+                                    {ComConstance.boat.cabins} <i
+                                    className="fas fa-person-booth blue-text"></i> {this.state.cabins}.
                                     <hr/>
-                                    Guests <i className="fas fa-user-friends blue-text"></i> {this.state.guests}.
+                                    {ComConstance.boat.guests} <i
+                                    className="fas fa-user-friends blue-text"></i> {this.state.guests}.
                                 </div>
                                 <hr/>
                             </div>
@@ -76,25 +80,27 @@ class OfferItem extends Component {
                         <hr/>
                         <div className={'row'}>
                             <span className={'col-sm-4 float-left'}>
-                                    <i className="fa fa-eye blue-text">  </i> {this.state.views_24} last 24 hours
+                                    <i className="fa fa-eye blue-text">  </i> {this.state.views_24} {ComConstance.boat.last24Hours}
                             </span>
                             <span className={'col-sm-4 float-center'}>
                                     <i className="far fa fa-star orange-text">{this.state.review_count}</i>
                             </span>
                             <div className={'sol-sm 4 float-right font-italic'}>
                                 <span>
-                                    From € <strong className={'blue-text'}>{this.state.price}</strong> Weekly
+                                    {ComConstance.boat.stratFrom} {ComConstance.boat.currency}
+                                    <strong
+                                        className={'blue-text'}>{this.state.price}</strong> {ComConstance.boat.pricePercent}
                                 </span>
                             </div>
                         </div>
                         <hr/>
                         <div className={''}>
                             <MDBBtn color="primary float-right col-sm-4">
-                                Direct Booking <i className="fas fa-bolt white-text"></i>
+                                {ComConstance.directBooking} <i className="fas fa-bolt white-text"></i>
                             </MDBBtn>
                             <MDBBtn outline color="primary col-sm-6" disabled={true}>
-                                <i className="fas fa-check"></i> Sicherungsshein  &nbsp;
-                                <i className="fas fa-check"></i> Luxury </MDBBtn>
+                                <i className="fas fa-check"></i> {ComConstance.boat.sicherungsshein}  &nbsp;
+                                <i className="fas fa-check"></i> {ComConstance.boat.luxury} </MDBBtn>
                         </div>
                     </MDBCardBody>
                 </MDBCard>
