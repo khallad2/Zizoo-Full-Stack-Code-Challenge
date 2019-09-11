@@ -65,7 +65,7 @@ class Search extends Component {
                 <header>
                     <div className={"container-fluid"}>
                         <div id={'header-content'} className={"row"}>
-                            <div className={"col-4 animated 2 bounce slow"}>
+                            <div className={"col-4 "}>
                                 <a href={'https://www.zizoo.com/'}
                                    target={'_blank'}><h2><img className={'logo'} src={'/images/logo.jpg'} alt={'logo'}/>
                                 </h2></a>

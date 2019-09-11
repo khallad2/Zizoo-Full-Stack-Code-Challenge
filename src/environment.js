@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Define local environment constants
  * @type {{apolloClient: {headers: {"x-api-key": string, "content-type": string}, uri: string}}}
