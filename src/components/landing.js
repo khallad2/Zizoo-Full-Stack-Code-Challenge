@@ -22,9 +22,14 @@ class Landing extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevState.displaySearch) {
-            console.log('prevState.displaySearch', prevState.displaySearch);
             this.returnHome();
         }
+    }
+
+    componentWillUnmount() {
+        this.setState({
+            displaySearch: false
+        })
     }
 
     /**
