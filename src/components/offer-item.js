@@ -20,7 +20,7 @@ class OfferItem extends Component {
 
     constructor(props) {
         super(props);
-        this.state.offerItem = (this.props.offerItem !== undefined) ? this.props.offerItem : null;
+        this.state.offerItem = this.props.offerItem;
         this.state.offerItem.free_extras = this.convertStringToJson(this.state.offerItem.free_extras);
     }
 

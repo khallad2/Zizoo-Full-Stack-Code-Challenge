@@ -22,5 +22,5 @@ export const ComConstance = {
         luxury: 'Luxury'
     },
     directBooking: 'Direct Booking',
-    headerTitle: 'React-Graphql in a nutshell'
+    headerTitle: 'Fullstack-code-challenge'
 }
